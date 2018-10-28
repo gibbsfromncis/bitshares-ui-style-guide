@@ -462,32 +462,85 @@ button.ant-switch {
 
 .ant-popover {
 
-  .ant-popover-content {
-    border: 1px solid @popover-content-border-color;
+  // placements
+  &.ant-popover-placement-rightBottom,
+  &.ant-popover-placement-rightTop,
+  &.ant-popover-placement-right {
+    .ant-popover-content {
+      .ant-popover-arrow {
+        box-shadow: -1px 1px 0 0 @popover-title-border-bottom-color;
+      }
+      .ant-popover-inner {
+        box-shadow: 0 0 0 1px @popover-title-border-bottom-color;
+      }
+    }
+  }
 
+  &.ant-popover-placement-topLeft,
+  &.ant-popover-placement-top,
+  &.ant-popover-placement-topRight {
+    .ant-popover-content {
+      .ant-popover-arrow {
+        box-shadow: 1px 1px 0 0 @popover-title-border-bottom-color;
+      }
+      .ant-popover-inner {
+        box-shadow: 0 0 0 1px @popover-title-border-bottom-color;
+      }
+    }
+  }
+
+  &.ant-popover-placement-leftTop,
+  &.ant-popover-placement-left,
+  &.ant-popover-placement-leftBottom {
+    .ant-popover-content {
+      .ant-popover-arrow {
+        box-shadow: -1px 1px 0 0 @popover-title-border-bottom-color;
+      }
+      .ant-popover-inner {
+        box-shadow: 0 0 0 1px @popover-title-border-bottom-color;
+      }
+    }
+  }
+
+  &.ant-popover-placement-bottomRight,
+  &.ant-popover-placement-bottom,
+  &.ant-popover-placement-bottomLeft {
+    .ant-popover-content {
+      .ant-popover-arrow {
+        box-shadow: -1px -1px 0 0 @popover-title-border-bottom-color;
+      }
+      .ant-popover-inner {
+        box-shadow: 0 0 0 1px @popover-title-border-bottom-color;
+      }
+    }
+  }
+
+  //.ant-popover-content {
+  //  border: 1px solid @popover-content-border-color;
+  //
     .ant-popover-title {
       border-bottom: 1px solid @popover-title-border-bottom-color;
     }
 
-    .ant-popover-arrow {
-      border: 1px solid @popover-arrow-border-color;
-      bottom: 7px !important;
-      margin-top: -10px !important;
-      &:after {
-        content: "";
-        display: block;
-        background: @popover-triangle-bg;
-        width: 48.071068px;
-        height: 7.07106781px;
-        transform: rotate(135deg);
-        position: absolute;
-        border: solid transparent;
-        margin-top: -11px;
-        margin-left: -17px;
-      }
-    }
+    //.ant-popover-arrow {
+    //  border: 1px solid @popover-arrow-border-color;
+    //  bottom: 7px !important;
+    //  margin-top: -10px !important;
+    //  &:after {
+    //    content: "";
+    //    display: block;
+    //    background: @popover-triangle-bg;
+    //    width: 48.071068px;
+    //    height: 7.07106781px;
+    //    transform: rotate(135deg);
+    //    position: absolute;
+    //    border: solid transparent;
+    //    margin-top: -11px;
+    //    margin-left: -17px;
+    //  }
+    //}
 
-  }
+  //}
 }
 
 // ant-card
